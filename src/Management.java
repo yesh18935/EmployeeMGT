@@ -17,8 +17,8 @@ public class Management {
 
 
         ArrayList<Employee> employeeList = new ArrayList<Employee>();
-//        employeeList.add(EmployeeFactory.createEmployee("a", 1, 10000, Employee.tname.alpha, Employee.type.employee));
-        employeeList.add(EmployeeFactory.createEmployee(Employee.tname.alpha, Employee.type.employee));
+//        employeeList.add(EmployeeFactory.createRandEmployee("a", 1, 10000, Employee.tname.alpha, Employee.type.employee));
+        employeeList.add(EmployeeFactory.createRandEmployee(Employee.tname.alpha, Employee.type.employee));
 
         System.out.println(employeeList);
         System.out.println("Average: "+Functions.findAvg(employeeList));

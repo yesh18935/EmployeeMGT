@@ -12,7 +12,8 @@ class RandomGenTest {
     }
 
     @Test
-    void generateRandInt(int max, int min) {
-        assertFalse(min>max);
+    void generateRandInt() {
+
+
     }
 }

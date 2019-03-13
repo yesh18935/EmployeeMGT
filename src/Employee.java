@@ -66,6 +66,5 @@ public class Employee implements Serializable {
     @Override
     public String toString() {
         return ("Name:"+this.getName()+" Id:"+this.getId()+" Salary:"+this.getSalary()+" Team:"+this.getTeam()+" Status: "+getStatus());
-        // why is it better to use getters and setters
     }
 }
