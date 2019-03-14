@@ -73,6 +73,7 @@ public class Management {
 
         out.writeObject(emap);
         out.close();
+        scan.close();
 
 
 
