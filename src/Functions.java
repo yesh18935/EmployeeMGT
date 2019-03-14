@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -18,5 +20,10 @@ public class Functions {
                 .filter(p ->(Employee.type.employee).equals(p.getStatus()))
                 .collect(Collectors.summingDouble(p -> p.getSalary()));
         return average;
+    }
+
+    static Map<Employee.tname, List<Employee>> getEmployeeMap(ArrayList<Employee> employeeList) {
+        return employeeList.stream()
+                    .collect(Collectors.groupingBy(Employee::getTeam));
     }
 }
