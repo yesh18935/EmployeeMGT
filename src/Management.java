@@ -33,7 +33,7 @@ public class Management {
                 System.out.println("Enter ID: ");
                 int id = scan.nextInt();
                 System.out.println("Enter Salary: ");
-                Double salary = scan.nextDouble();
+                Double salary = scan.nextDouble(); //scan.nextObj  scan.next Test case should handle invalid exception
                 System.out.println("Enter team: "+ Employee.type.values());
                 Employee.tname team = Employee.tname.valueOf(scan.next());
                 System.out.println("Enter status: "+ Employee.type.values());
@@ -43,7 +43,7 @@ public class Management {
 
             case 2:
                 System.out.println("creating random employee...");
-                employeeList.add(EmployeeFactory.createRandEmployee(Employee.tname.beta, Employee.type.employee));
+                employeeList.add(EmployeeFactory.createRandEmployee());
                 break;
 
             case 3:
@@ -64,7 +64,6 @@ public class Management {
 
         System.out.println(employeeList.get(1).getTeam());
         System.out.println("Average: "+Functions.findAvg(employeeList));
-
 
 //        Functions.findemp(sname, employeeList);
 

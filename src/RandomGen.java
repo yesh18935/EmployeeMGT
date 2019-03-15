@@ -14,8 +14,20 @@ public class RandomGen {
                 .collect(StringBuilder::new, (sb, i) -> sb.append((char) i), StringBuilder::append).toString();
     }
 
-    public static int genrateRandInt(int max, int min){
+    public static int generateRandInt(int max, int min){
         return ((int)(Math.random()*(max -min)+1) + min);
+    }
+
+    public static Employee.tname generateRandTeam(Random random){
+
+        return (Employee.tname.values()[random.nextInt(3)]);
+
+    }
+
+    public static Employee.type generateRandType(Random random){
+
+        return (Employee.type.values()[random.nextInt(3)]);
+
     }
 
 

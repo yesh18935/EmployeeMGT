@@ -16,7 +16,7 @@ public class EmployeeTest {
     }
 
     @Test
-    public void getId() {
+    public void getId() throws Exception{
         Employee abc = new Employee();
         assertEquals(0, abc.getId());
     }
@@ -26,14 +26,14 @@ public class EmployeeTest {
     }
 
     @Test
-    public void getSalary() {
+    public void getSalary() throws Exception{
         Employee abc = new Employee();
         assertEquals(0.0, abc.getSalary(), 1);
-        assertTrue(abc.getSalary()>0.0);
+        assertTrue(abc.getSalary()>=0.0);
     }
 
     @Test
-    public void setSalary() {
+    public void setSalary() throws Exception{
 
     }
 
@@ -48,7 +48,7 @@ public class EmployeeTest {
     }
 
     @Test
-    public void getStatus() {
+    public void getStatus() throws Exception{
         Employee abc = new Employee();
         assertEquals(Employee.type.employee, abc.getStatus());
     }
