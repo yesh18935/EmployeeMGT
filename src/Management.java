@@ -43,7 +43,7 @@ public class Management {
 
             case 2:
                 System.out.println("creating random employee...");
-                employeeList.add(EmployeeFactory.createRandEmployee(Employee.tname.alpha, Employee.type.employee));
+                employeeList.add(EmployeeFactory.createRandEmployee(Employee.tname.beta, Employee.type.employee));
                 break;
 
             case 3:
@@ -52,8 +52,9 @@ public class Management {
                 Functions.findemp(sname, employeeList);
                 break;
 
-            default:
-                break;
+            case 99: break;
+
+            default: break;
 
                 }
 
@@ -61,7 +62,7 @@ public class Management {
 //        employeeList.add(EmployeeFactory.createEmployee("a", 1, 10000, Employee.tname.alpha, Employee.type.employee));
 //        employeeList.add(EmployeeFactory.createRandEmployee(Employee.tname.alpha, Employee.type.employee));
 
-        System.out.println(employeeList);
+        System.out.println(employeeList.get(1).getTeam());
         System.out.println("Average: "+Functions.findAvg(employeeList));
 
 

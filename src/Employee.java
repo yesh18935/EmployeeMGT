@@ -2,14 +2,22 @@ import java.io.Serializable;
 
 public class Employee implements Serializable {
 
-    enum type {employee, manager, recruiter};
-    enum tname {alpha, beta, gamma};
+    enum type {employee, manager, recruiter}
+    enum tname {alpha, beta, gamma}
 
     private String name;
     private int id;
     private double salary;
     private tname team;
     private type status;
+
+    Employee(){
+        name = null;
+        id = 0;
+        salary = 0;
+        team = tname.alpha;
+        status = type.employee;
+    }
 
     Employee(String name,int id,double salary,tname team, type status){
         this.name = name;
@@ -59,9 +67,6 @@ public class Employee implements Serializable {
         this.status = status;
     }
 
-    void details(){
-        System.out.println("Name:"+name+" Id:"+id+" Salary:"+salary+" Team:"+team+" Status:"+status);
-    }
 
     @Override
     public String toString() {
